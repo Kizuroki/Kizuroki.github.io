@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paintings</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Gallery Container */
+        #gallery {
+            padding: 50px 20px;
+            background-color: #e581c5;
+            text-align: center;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Gallery Item */
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+        }
+
+        /* Gallery Item Image */
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        /* Hover Effect */
+        .gallery-item:hover img {
+            transform: scale(1.5);
+            position:relative;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button to open and close the sidebar -->
+    <div id="main">
+        <button id="openSidebarBtn" onclick="toggleNav()"></button>
+    </div>
+    <!-- sidebar and sidebar content -->
+    <div id="mySidebar" class="sidebar">
+        <img src="images/PinkWave.PNG" alt="Art Sidebar" id="sidebarImage">
+        <div class="sidebar-content">
+            <a href="index.html">Home</a>
+            <a href="digital-art.html">Digital Art</a>
+            <a href="Traditional.html">Traditional</a>
+            <a href="paintings.html">Paintings</a>
+            <a href="process.html">Process</a>
+            <a href="shortcomic.html">Short Comic</a>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h1>Paintings</h1>
+        <ul class="gallery-grid">
+            <li class="gallery-item"><img src="images/WhitePeonies.png" alt="Digital Art 1"></li>
+            <li class="gallery-item"><img src="images/Angel.png" alt="Digital Art 2"></li>
+            <li class="gallery-item"><img src="images/PinkFlower.png" alt="Digital Art 3"></li>
+            <li class="gallery-item"><img src="images/Flowers.png" alt="Digital Art 4"></li>
+            <li class="gallery-item"><img src="images/Pancakes.PNG.png" alt="Digital Art 5"></li>
+            <li class="gallery-item"><img src="images/Flower3.png" alt="Digital Art 8"></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Isabel Rodriguez. All rights reserved.</p>
+    </footer>
+
+    <!--open close button Javascript-->
+    
+    <script>
+        
+        function toggleNav() {
+            const sidebar = document.getElementById("mySidebar");
+            const openSidebarBtn = document.getElementById("openSidebarBtn");
+            const sidebarImage = document.getElementById("sidebarImage");
+    
+            if (sidebar.style.width === "300px") {
+                sidebar.style.width = "0";
+                sidebarImage.style.opacity = "0";
+                openSidebarBtn.classList.remove("active");
+            } else {
+                sidebar.style.width = "300px";
+                sidebarImage.style.opacity = "1";
+                openSidebarBtn.classList.add("active");
+            }
+        }
+    </script>
+    
+</body>
+</html>
