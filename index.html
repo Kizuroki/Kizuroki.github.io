@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Art Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- sidebar and sidebar content -->
+    <div id="mySidebar" class="sidebar">
+        <img src="images/BeachWave.PNG" alt="Art Sidebar" id="sidebarImage">
+        <div class="sidebar-content">
+            <a href="digital-art.html">Digital Art</a>
+            <a href="Traditional.html">Traditional</a>
+            <a href="paintings.html">Paintings</a>
+            <a href="process.html">Process</a>
+            <a href="shortcomic.html">Short Comic</a>
+        </div>
+    </div>
+
+    <!-- Button to open and close the sidebar -->
+    <div id="main">
+        <button id="openSidebarBtn" onclick="toggleNav()"></button>
+    </div>
+
+    <!-- Content -->
+    <header>
+        <div class="header-text">
+            <h1>Isabel Rodriguez</h1>
+            <p>Digital Artist & Creative Designer</p>
+        </div>
+    </header>
+
+    <div class="about-image-wrapper">
+        <img src="images/Me.PNG" alt="Digital Art 1" class="about-image">
+    </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Isabel Rodriguez, a second year Computational Media major at Georgia Tech!</p>
+        <p>I've always loved doing art and decided to create this website to display all of the pieces I've made so far that I'm proud of!</p>
+        <p><b>By clicking the pink clam at the top-right, a side bar will show up with all the different things I want to showcase!</b></p>
+        <p>Every single thing you see on this page was created by me! From the side bar and clam icon to all the art pieces!</p>
+        <p>I hope you enjoy looking through them all! Thank you for dropping by!</p>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Isabel Rodriguez. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to open and close the sidebar and toggle button image -->
+   <script>
+    function toggleNav() {
+        const sidebar = document.getElementById("mySidebar");
+        const openSidebarBtn = document.getElementById("openSidebarBtn");
+        const sidebarImage = document.getElementById("sidebarImage");
+        
+        if (sidebar.style.width === "300px") {
+            sidebar.style.width = "0";
+            sidebarImage.style.opacity = "0";
+            openSidebarBtn.classList.remove("active");
+        } else {
+            sidebar.style.width = "300px";
+            sidebarImage.style.opacity = "1";
+            openSidebarBtn.classList.add("active");
+        }
+    }
+</script>
+
+</body>
+</html>
