@@ -141,7 +141,7 @@ nav ul li {
     background-position: center;
     background-repeat: no-repeat;
     transition: opacity 1s; /* Smooth transition for opacity change */
-    background: url('images/Open.PNG') no-repeat center;
+    background: url('assets/images/Open.PNG') no-repeat center;
     border: none;
     position: fixed;
     top: 0;
@@ -150,11 +150,11 @@ nav ul li {
 }
 
 #openSidebarBtn:hover {
-    background: url('images/Closed.PNG') no-repeat center;
+    background: url('assets/images/Closed.PNG') no-repeat center;
 }
 
 #openSidebarBtn.active {
-    background: url('images/Open.PNG') no-repeat center;
+    background: url('assets/images/Open.PNG') no-repeat center;
 }
 
 /* Section Styles */
